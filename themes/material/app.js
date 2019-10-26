@@ -248,7 +248,7 @@ function file_code(path){
 // 文件展示 mp4
 function file_video(path){
 	var url = window.location.origin + path;
-	var vtt_file = window.location.origin + path.substring(0, str1.length - 4).concat('.vtt');
+	var vtt_file = window.location.origin + path.substring(0, path.length - 4).concat('.vtt');
 	var content = `
 <div class="mdui-container-fluid">
 	<br>
