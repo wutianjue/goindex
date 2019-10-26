@@ -248,11 +248,13 @@ function file_code(path){
 // 文件展示 mp4
 function file_video(path){
 	var url = window.location.origin + path;
+	var vtt_file = window.location.origin + path.substring(0, str1.length - 4).concat('.vtt');
 	var content = `
 <div class="mdui-container-fluid">
 	<br>
 	<video class="mdui-video-fluid mdui-center" preload controls>
 	  <source src="${url}" type="video/mp4">
+          <track label="subtitle" kind="subtitles" chapters metadata srclang="zh" src="${vtt_file}" default>
 	</video>
 	<br>
 	<!-- 固定标签 -->
